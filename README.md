@@ -11,7 +11,7 @@ Supported platforms
 ===================
 
 This cookbook has only been tested on Linux Mint, my development platform of choice.
-However, should work on Debian and Ubuntu.  Guess I Need to start using test-kitchen!
+However, should work on Debian and Ubuntu.
 
 Requirements
 ============
