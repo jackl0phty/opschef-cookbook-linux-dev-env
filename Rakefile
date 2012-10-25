@@ -9,7 +9,7 @@ end
    
 desc "Runs foodcritic linter"
 task :default => :spec
-require 'rspec/core/rake_task'
+require 'rake/testtask'
 
 RSpec::Core::RakeTask.new
 task :foodcritic do
