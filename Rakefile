@@ -8,6 +8,10 @@ Rake::TestTask.new do |t|
 end
    
 desc "Runs foodcritic linter"
+task :default => :spec
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new
 task :foodcritic do
   if Gem::Version.new("1.9.2") <= Gem::Version.new(RUBY_VERSION.dup)
     sh "foodcritic --epic-fail any ."
