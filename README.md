@@ -68,6 +68,45 @@ The linux-dev-env::eclipse will install the latest version of the 'classic' vers
 
 The linux-dev-env::java recipe will install Sun Java 6u37 and set it as the default Java via update-alternatives.
  
+Next apply your new node definition against your node like so:
+<pre><code>
+laptop / # chef-client
+[Tue, 30 Oct 2012 17:01:12 -0400] INFO: *** Chef 10.12.0 ***
+[Tue, 30 Oct 2012 17:01:17 -0400] INFO: Run List is [role[android_dev], recipe[linux-dev-env::eclipse], recipe[linux-dev-env::java]]
+[Tue, 30 Oct 2012 17:01:17 -0400] INFO: Run List expands to [linux-dev-env::android, linux-dev-env::eclipse, linux-dev-env::java]
+[Tue, 30 Oct 2012 17:01:17 -0400] INFO: Starting Chef Run for laptop
+[Tue, 30 Oct 2012 17:01:17 -0400] INFO: Running start handlers
+[Tue, 30 Oct 2012 17:01:17 -0400] INFO: Start handlers complete.
+[Tue, 30 Oct 2012 17:01:20 -0400] INFO: Loading cookbooks [linux-dev-env]
+[Tue, 30 Oct 2012 17:01:23 -0400] INFO: Processing script[download-android-sdk] action run (linux-dev-env::android line 9)
+[Tue, 30 Oct 2012 17:01:23 -0400] INFO: Processing script[untar-android-sdk] action run (linux-dev-env::android line 21)
+[Tue, 30 Oct 2012 17:01:23 -0400] INFO: Processing script[set-permissions-on-android-sdk] action run (linux-dev-env::android line 33)
+[Tue, 30 Oct 2012 17:01:23 -0400] INFO: Processing package[ia32-libs] action install (linux-dev-env::android line 44)
+[Tue, 30 Oct 2012 17:01:24 -0400] INFO: Processing execute[download-eclipse-ide-x86_64_classic] action run (linux-dev-env::eclipse line 26)
+[Tue, 30 Oct 2012 17:01:24 -0400] INFO: Processing script[install Java 6 JDK] action run (linux-dev-env::java line 11)
+[Tue, 30 Oct 2012 17:01:24 -0400] INFO: Processing script[set-sun-java-as-default] action run (linux-dev-env::java line 28)
+[Tue, 30 Oct 2012 17:01:24 -0400] INFO: script[set-sun-java-as-default] ran successfully
+[Tue, 30 Oct 2012 17:01:25 -0400] INFO: Chef Run complete in 7.36495 seconds
+[Tue, 30 Oct 2012 17:01:25 -0400] INFO: Running report handlers
+[Tue, 30 Oct 2012 17:01:25 -0400] INFO: Report handlers complete
+laptop etc #
+</pre></code>
+
+Where to go From Here
+=====================
+
+* If you made it this far you probably want to download and enable various tools, platforms & other components via the Android SDK Manager.
+You can follow the following instructions from android.com [here](http://developer.android.com/sdk/installing/adding-packages.html).
+
+* If you want to use the Eclipse (classic) IDE be sure the apply the linux-dev-env::eclipse recipe against your node.
+
+* If you're using the Eclipse you can following the instructions from android.com [here](http://developer.android.com/sdk/installing/installing-adt.html)
+to install the Android Development Tools (ADT) Eclipse plugin.
+
+* You may now want to follow 'Next Steps' from android.com found [here](http://developer.android.com/sdk/installing/next.html).
+
+If you made it this far congratulations! You should now be ready to develope applications for Android.
+
 Attributes
 ==========
 
