@@ -7,9 +7,6 @@ Rake::TestTask.new do |t|
   t.verbose = true
 end
    
-# Define default task
-task :default => [:foodcritic]
-
 desc "Runs foodcritic linter"
 task :foodcritic do
   if Gem::Version.new("1.9.2") <= Gem::Version.new(RUBY_VERSION.dup)
@@ -18,3 +15,5 @@ task :foodcritic do
     puts "WARN: foodcritic run is skipped as Ruby #{RUBY_VERSION} is < 1.9.2."
   end
 end
+   
+task :default => [ 'test', 'foodcritic' ]
