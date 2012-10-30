@@ -115,7 +115,7 @@ Lua Development
 Apply the recipe linux-dev-env::lua to install the Lua programming language.
 
 Here's a sample role to install Lua and other supported Lua packages:
-</pre></code>
+<pre><code>
 name "android_dev"
 description "Configure a GNU/Linux desktop/laptop for Android development "
 run_list "recipe[linux-dev-env::android]"
