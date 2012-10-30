@@ -3,5 +3,4 @@ maintainer_email "jackl0phty@gmail.com"
 license          "Apache 2.0"
 description      "Installs/Configures linux-dev-env"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.0.8"
-#depends		 "java"
+version          "0.0.10"

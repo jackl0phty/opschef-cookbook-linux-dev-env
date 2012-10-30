@@ -29,3 +29,12 @@ default['linux-dev-env']['java_version'] = '6u37'
 # Set Lua version to install
 # Possible values: 5.1, 5.2
 default['linux-dev-env']['lua_version'] = '5.2'
+
+# Set to yes to install luakit
+default['linux-dev-env']['install_luakit'] = 'no'
+
+# Set to yes to install luarocks
+default['linux-dev-env']['install_luarocks'] = 'no'
+
+# Set to yes to install luasocket
+default['linux-dev-env']['install_luasocket'] = 'no'

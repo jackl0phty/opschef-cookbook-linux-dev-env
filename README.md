@@ -4,12 +4,14 @@ Description
 ===========
 
 The primary focus of this cookbook will be preparing a GNU/Linux desktop/laptop/workstation/etc for various
-types of Development.  The initial focus will be on Android and, at some point, on Arm Assembly on the
-Raspberry Pi & Lua.
+types of Development.  The initial focus will be on Android and lua. At some point, Arm Assembly on the
+Raspberry Pi.
 
 Supported Development Environments
 ==================================
+
 * Android
+* Lua
 
 Supported platforms
 ===================
@@ -106,6 +108,21 @@ to install the Android Development Tools (ADT) Eclipse plugin.
 * You may now want to follow 'Next Steps' from android.com found [here](http://developer.android.com/sdk/installing/next.html).
 
 If you made it this far congratulations! You should now be ready to develope applications for Android.
+
+Lua Development
+===============
+
+Apply the recipe linux-dev-env::lua to install the Lua programming language.
+
+Here's a sample role to install Lua and other supported Lua packages:
+</pre></code>
+name "android_dev"
+description "Configure a GNU/Linux desktop/laptop for Android development "
+run_list "recipe[linux-dev-env::android]"
+override_attributes "linux-dev-env" => { "android_user" => "skywalker",
+         	    "android_group" => "skywalker", "install_webkit" => "yes",
+		    "install_luarocks" => "yes", "install_luasocket" => "yes" }
+</pre></code>
 
 Attributes
 ==========
