@@ -25,3 +25,7 @@ default['linux-dev-env']['eclipse_ide_version'] = '4.2.1'
 
 # Java version to install
 default['linux-dev-env']['java_version'] = '6u37'
+
+# Set Lua version to install
+# Possible values: 5.1, 5.2
+default['linux-dev-env']['lua_version'] = '5.2'
