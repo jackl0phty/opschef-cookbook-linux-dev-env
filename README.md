@@ -157,6 +157,23 @@ Java version to install.
 <pre><code>
 default['linux-dev-env']['java_version'] = '6u37'
 </pre></code>
+Set Lua version to install
+Possible values: 5.1, 5.2
+<pre><code>
+default['linux-dev-env']['lua_version'] = '5.2'
+</pre></code>
+Set to yes to install luakit
+<pre><code>
+default['linux-dev-env']['install_luakit'] = 'no'
+</pre></code>
+Set to yes to install luarocks
+<pre><code>
+default['linux-dev-env']['install_luarocks'] = 'no'
+</pre></code>
+Set to yes to install luasocket
+<pre><code>
+default['linux-dev-env']['install_luasocket'] = 'no'
+</pre></code>
 
 You will need to at least set 'android_user' and 'android_group'.  This is the uid/gid under which you will be
 doing Android development.
