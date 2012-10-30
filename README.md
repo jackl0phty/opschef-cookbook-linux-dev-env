@@ -5,7 +5,11 @@ Description
 
 The primary focus of this cookbook will be preparing a GNU/Linux desktop/laptop/workstation/etc for various
 types of Development.  The initial focus will be on Android and, at some point, on Arm Assembly on the
-Raspberry Pi.
+Raspberry Pi & Lua.
+
+Supported Development Environments
+==================================
+* Android
 
 Supported platforms
 ===================
